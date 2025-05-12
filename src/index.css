@@ -108,6 +108,31 @@
   }
 }
 
+/* Prose styles for camping description */
+.prose {
+  @apply text-gray-700 leading-relaxed;
+}
+
+.prose h3 {
+  @apply text-xl font-bold text-[#1E5631] font-montserrat mb-4;
+}
+
+.prose h4 {
+  @apply text-lg font-bold text-[#1E5631] font-montserrat mt-6 mb-2;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose ul {
+  @apply list-disc pl-5 mb-4;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
 /* Custom animations */
 @layer utilities {
   .hover-scale {
@@ -122,4 +147,27 @@
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
+}
+
+/* Ensure all images in cards maintain aspect ratio */
+.card img {
+  @apply object-cover;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#1E5631]/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#1E5631]/70;
 }
